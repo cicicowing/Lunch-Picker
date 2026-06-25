@@ -1,0 +1,118 @@
+.suggestions h1 {
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.suggestions .subtitle {
+  color: #666;
+  margin-bottom: 32px;
+  font-size: 18px;
+}
+
+.success-msg {
+  background: #d4edda;
+  color: #155724;
+  border-left: 4px solid #28a745;
+}
+
+.error-msg {
+  background: #f8d7da;
+  color: #721c24;
+  border-left: 4px solid #dc3545;
+}
+
+.voted-card {
+  background: #e7f3ff;
+  border-left: 4px solid #4a90e2;
+}
+
+.suggestions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 24px;
+}
+
+.suggestion-card {
+  position: relative;
+  transition: all 0.3s;
+}
+
+.suggestion-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.suggestion-card.voted {
+  border: 2px solid #2ecc71;
+  background: #f0fdf4;
+}
+
+.suggestion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #e1e8ed;
+}
+
+.suggestion-header h2 {
+  font-size: 22px;
+  color: #333;
+  margin: 0;
+  flex: 1;
+}
+
+.vote-badge {
+  background: #4a90e2;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  margin-left: 12px;
+}
+
+.suggestion-details {
+  line-height: 2;
+  margin-bottom: 16px;
+}
+
+.suggestion-details p {
+  margin-bottom: 4px;
+  color: #555;
+}
+
+.walking-time {
+  background: #fff3cd;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+.walking-times {
+  background: #f8f9fa;
+  padding: 16px;
+  border-radius: 8px;
+  margin-top: 16px;
+}
+
+.walking-times h4 {
+  margin-bottom: 8px;
+  color: #555;
+  font-size: 14px;
+}
+
+.walking-times ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.walking-times li {
+  padding: 4px 0;
+  color: #666;
+  font-size: 14px;
+}
