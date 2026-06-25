@@ -13,6 +13,16 @@ const votingRoutes = require('./routes/voting');
 const { generateWeeklySuggestions } = require('./services/suggestionService');
 
 const app = express();
+
+// Auto-create database tables on first startup
+const fs = require('fs');
+const path = require('path');
+if (process.env.AUTO_MIGRATE === 'true') {
+  const schema = fs.readFileSync(path.join(__dirname, 'db', 'schema.sql'), 'utf8');
+  const db = require('./db');
+  db.query(schema).then(() => console.log('✅ Database schema created')).catch(console.error);
+}
+
 const PORT = process.env.PORT || 5000;
 
 app.use(cors());
